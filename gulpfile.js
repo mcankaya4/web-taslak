@@ -8,7 +8,7 @@ gulp.task('css', function () {
   return gulp.src('./scss/main.scss')
     .pipe(sass())
     .pipe(prefix('last 2 versions, > 1%'))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./css/'))
     .pipe(browserSync.stream())
 })
 

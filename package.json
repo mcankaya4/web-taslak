@@ -1,5 +1,5 @@
 {
-  "name": "project-start",
+  "name": "first-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,5 +15,8 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
