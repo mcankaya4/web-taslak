@@ -1,11 +1,23 @@
-$max-width: 1210px;
-$right-left-padding: 20px;
-$filter-background-color:#F7F9F9;
-$border-color: #ECECEC;
-$font-family: 'Open Sans','Roboto',Arial, sans-serif;
+$container-width   : 1210px;
+$container-padding : 20px;
 
 
-$search-color:#a2a3a6;
-$light-blue-color:#43A6EB;
-$dark-blue-color:#2E91D5;
-$green-color:#5FBB6C;
+$font-family: 'Open Sans',
+'Roboto',
+Arial,
+'sans-serif';
+
+
+$search-color     :#a2a3a6;
+$light-blue-color :#43A6EB;
+$dark-blue-color  :#2E91D5;
+$green-color      :#5FBB6C;
+$dark-gray        :#6B6B6B;
+
+
+
+
+$header-button-background-color:#F7F9F9;
+$header-button-text-color      :#6D758C;
+
+$border-color                  :#ECECEC;

@@ -1,5 +1,4 @@
 .Header {
-
     border-bottom: 1px solid $border-color;
 
     .container {
@@ -9,91 +8,242 @@
     }
 
     &-logo img {
-        width: 166px;
+        width      : 166px;
+        user-select: none;
     }
 
-    &-search {
-        display    : flex;
-        margin-left: auto;
-        height     : 35px;
-
-        &-filter {
-            border          : 1px solid $border-color;
-            border-radius   : 2px 0 0 2px;
-            background-color: $filter-background-color;
-            width           : 84px;
+    &-search-s {
+        @include mq("xsmall") {
+            margin-left     : auto;
+            margin-right    : 10px;
+            outline         : none;
+            cursor          : pointer;
+            width           : 37px;
             height          : 35px;
-            display         : flex;
-            align-items     : center;
-            justify-content : center;
-            user-select     : none;
+            background-color: $header-button-background-color;
+            border          : 1px solid $border-color;
 
-            &-text {
-                font-size: 16px;
-                color    : #6D758C;
-            }
-
-            svg {
-                color     : #6D758C;
-                transform : rotate(90deg);
-                width     : 13px;
-                height    : 13px;
-                margin-top: 2px;
-                margin-left: 1px;
-            }
-
-            &:hover {
-                cursor: pointer;
-            }
-
-            &:hover &-text,
-            &:hover svg {
-                color       : $light-blue-color;
-                border-color: $light-blue-color transparent transparent transparent;
+            .icon-search {
+                width : 20px;
+                height: 13px;
+                color : $header-button-text-color;
             }
         }
 
-        &-group {
-            position: relative;
+        @include mq("small") {
+            margin-left     : auto;
+            margin-right    : 10px;
+            outline         : none;
+            cursor          : pointer;
+            width           : 37px;
+            height          : 35px;
+            background-color: $header-button-background-color;
+            border          : 1px solid $border-color;
 
-            &-input {
-                outline      : none;
-                font-size    : 12px;
-                color        : $search-color;
-                height       : 35px;
-                border       : 1px solid $border-color;
-                border-left  : none;
-                width        : calc(461px - 84px);
-                padding-left : 15px;
-                border-radius: 0 2px 2px 0;
+            .icon-search {
+                width : 20px;
+                height: 13px;
+                color : $header-button-text-color;
             }
+        }
 
-            svg {
-                position: absolute;
-                right   : 9px;
-                top     : 12px;
-                width   : 17px;
-                height  : 12px;
-                color   : $search-color;
+        @include mq("medium") {
+            margin-left     : auto;
+            margin-right    : 10px;
+            outline         : none;
+            cursor          : pointer;
+            width           : 37px;
+            height          : 35px;
+            background-color: $header-button-background-color;
+            border          : 1px solid $border-color;
+
+            .icon-search {
+                width : 20px;
+                height: 13px;
+                color : $header-button-text-color;
             }
+        }
+
+        @include mq("large") {
+            display: none;
 
         }
 
-        &-profile {
+        @include mq("xlarge") {
+            display: none;
+        }
+    }
 
-            background-color: $filter-background-color;
-            margin-left     : 15px;
-            border-radius   : 2px;
-            box-sizing      : border-box;
 
-            img {
-                width : 37px;
-                height: 35px;
+    &-search {
+
+        @include mq("xsmall") {
+            display: none;
+        }
+
+        @include mq("small") {
+            display: none;
+        }
+
+        @include mq("medium") {
+            display: none;
+        }
+
+        @include mq("large") {
+            display     : flex;
+            margin-left : auto;
+            margin-right: 10px;
+            height      : 35px;
+
+            &-filter {
+
+                border          : 1px solid $border-color;
+                border-radius   : 2px 0 0 2px;
+                background-color: $header-button-background-color;
+                width           : 84px;
+                height          : 35px;
+                display         : flex;
+                align-items     : center;
+                justify-content : center;
+                user-select     : none;
+
+                &-text {
+                    font-size: 16px;
+                    color    : #6D758C;
+                }
+
+                svg {
+                    color      : #6D758C;
+                    transform  : rotate(90deg);
+                    width      : 13px;
+                    height     : 13px;
+                    margin-top : 2px;
+                    margin-left: 1px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:hover &-text,
+                &:hover svg {
+                    color       : $light-blue-color;
+                    border-color: $light-blue-color transparent transparent transparent;
+                }
+
             }
 
-            &:hover {
-                cursor: pointer;
+            &-group {
+
+                position: relative;
+
+                &-input {
+                    outline      : none;
+                    font-size    : 12px;
+                    color        : $search-color;
+                    height       : 35px;
+                    border       : 1px solid $border-color;
+                    border-left  : none;
+                    width        : calc(461px - 84px);
+                    padding-left : 15px;
+                    border-radius: 0 2px 2px 0;
+                }
+
+                svg {
+                    position: absolute;
+                    right   : 9px;
+                    top     : 12px;
+                    width   : 17px;
+                    height  : 12px;
+                    color   : $search-color;
+                }
             }
+        }
+
+        @include mq("xlarge") {
+            display     : flex;
+            margin-left : auto;
+            margin-right: 10px;
+            height      : 35px;
+
+            &-filter {
+
+                border          : 1px solid $border-color;
+                border-radius   : 2px 0 0 2px;
+                background-color: $header-button-background-color;
+                width           : 84px;
+                height          : 35px;
+                display         : flex;
+                align-items     : center;
+                justify-content : center;
+                user-select     : none;
+
+                &-text {
+                    font-size: 16px;
+                    color    : #6D758C;
+                }
+
+                svg {
+                    color      : #6D758C;
+                    transform  : rotate(90deg);
+                    width      : 13px;
+                    height     : 13px;
+                    margin-top : 2px;
+                    margin-left: 1px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:hover &-text,
+                &:hover svg {
+                    color       : $light-blue-color;
+                    border-color: $light-blue-color transparent transparent transparent;
+                }
+
+            }
+
+            &-group {
+
+                position: relative;
+
+                &-input {
+                    outline      : none;
+                    font-size    : 12px;
+                    color        : $search-color;
+                    height       : 35px;
+                    border       : 1px solid $border-color;
+                    border-left  : none;
+                    width        : calc(461px - 84px);
+                    padding-left : 15px;
+                    border-radius: 0 2px 2px 0;
+                }
+
+                svg {
+                    position: absolute;
+                    right   : 9px;
+                    top     : 12px;
+                    width   : 17px;
+                    height  : 12px;
+                    color   : $search-color;
+                }
+            }
+        }
+
+    }
+
+    &-profile {
+        height          : 35px;
+        background-color: $header-button-background-color;
+        border          : 1px solid $border-color;
+        border-radius   : 2px;
+        user-select     : none;
+        cursor          : pointer;
+
+        &>img {
+            width : 37px;
+            height: 35px;
         }
     }
 }

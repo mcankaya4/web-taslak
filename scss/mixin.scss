@@ -1,0 +1,50 @@
+@mixin mq($width) {
+
+
+    @if($width=="xsmall") {
+
+        // XS  =   max(575)
+        @media (max-width: 575px) {
+            @content
+        }
+
+    }
+
+    @else if($width=="small") {
+
+        // S   =   min(576)-max(767)
+        @media (min-width: 576px) and (max-width: 767px) {
+            @content
+        }
+
+    }
+
+    @else if($width=="medium") {
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            @content
+        }
+
+    }
+
+    @else if($width=="large") {
+
+        // L   =   min(992)-max(1199)
+        @media (min-width: 992px) and (max-width: 1199px) {
+            @content
+        }
+
+    }
+
+    @else if($width=="xlarge") {
+
+        // XL  =   min(1200)
+        @media (min-width: 1200px) {
+            @content
+        }
+
+    }
+
+
+
+}
