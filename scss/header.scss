@@ -1,5 +1,6 @@
 .Header {
-    border-bottom: 1px solid $border-color;
+    border-bottom   : 1px solid $border-color;
+    background-color: white;
 
     .container {
         display    : flex;
@@ -13,60 +14,23 @@
     }
 
     &-search-s {
-        @include mq("xsmall") {
-            margin-left     : auto;
-            margin-right    : 10px;
-            outline         : none;
-            cursor          : pointer;
-            width           : 37px;
-            height          : 35px;
-            background-color: $header-button-background-color;
-            border          : 1px solid $border-color;
+        margin-left     : auto;
+        margin-right    : 10px;
+        outline         : none;
+        cursor          : pointer;
+        width           : 37px;
+        height          : 35px;
+        background-color: $header-button-background-color;
+        border          : 1px solid $border-color;
 
-            .icon-search {
-                width : 20px;
-                height: 13px;
-                color : $header-button-text-color;
-            }
-        }
-
-        @include mq("small") {
-            margin-left     : auto;
-            margin-right    : 10px;
-            outline         : none;
-            cursor          : pointer;
-            width           : 37px;
-            height          : 35px;
-            background-color: $header-button-background-color;
-            border          : 1px solid $border-color;
-
-            .icon-search {
-                width : 20px;
-                height: 13px;
-                color : $header-button-text-color;
-            }
-        }
-
-        @include mq("medium") {
-            margin-left     : auto;
-            margin-right    : 10px;
-            outline         : none;
-            cursor          : pointer;
-            width           : 37px;
-            height          : 35px;
-            background-color: $header-button-background-color;
-            border          : 1px solid $border-color;
-
-            .icon-search {
-                width : 20px;
-                height: 13px;
-                color : $header-button-text-color;
-            }
+        .icon-search {
+            width : 20px;
+            height: 13px;
+            color : $header-button-text-color;
         }
 
         @include mq("large") {
             display: none;
-
         }
 
         @include mq("xlarge") {
@@ -77,6 +41,75 @@
 
     &-search {
 
+        display     : flex;
+        margin-left : auto;
+        margin-right: 10px;
+        height      : 35px;
+
+        &-filter {
+
+            border          : 1px solid $border-color;
+            border-radius   : 2px 0 0 2px;
+            background-color: $header-button-background-color;
+            width           : 84px;
+            height          : 35px;
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            user-select     : none;
+
+            &-text {
+                font-size: 16px;
+                color    : $header-button-text-color;
+            }
+
+            svg {
+                color      : $header-button-text-color;
+                transform  : rotate(90deg);
+                width      : 13px;
+                height     : 13px;
+                margin-top : 2px;
+                margin-left: 1px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:hover &-text,
+            &:hover svg {
+                color       : $light-blue-color;
+                border-color: $light-blue-color transparent transparent transparent;
+            }
+
+        }
+
+        &-group {
+
+            position: relative;
+
+            &-input {
+                outline      : none;
+                font-size    : 12px;
+                color        : $search-color;
+                height       : 35px;
+                border       : 1px solid $border-color;
+                border-left  : none;
+                width        : calc(461px - 84px);
+                padding-left : 15px;
+                border-radius: 0 2px 2px 0;
+            }
+
+            svg {
+                position: absolute;
+                right   : 9px;
+                top     : 12px;
+                width   : 17px;
+                height  : 12px;
+                color   : $search-color;
+            }
+        }
+
         @include mq("xsmall") {
             display: none;
         }
@@ -87,148 +120,6 @@
 
         @include mq("medium") {
             display: none;
-        }
-
-        @include mq("large") {
-            display     : flex;
-            margin-left : auto;
-            margin-right: 10px;
-            height      : 35px;
-
-            &-filter {
-
-                border          : 1px solid $border-color;
-                border-radius   : 2px 0 0 2px;
-                background-color: $header-button-background-color;
-                width           : 84px;
-                height          : 35px;
-                display         : flex;
-                align-items     : center;
-                justify-content : center;
-                user-select     : none;
-
-                &-text {
-                    font-size: 16px;
-                    color    : #6D758C;
-                }
-
-                svg {
-                    color      : #6D758C;
-                    transform  : rotate(90deg);
-                    width      : 13px;
-                    height     : 13px;
-                    margin-top : 2px;
-                    margin-left: 1px;
-                }
-
-                &:hover {
-                    cursor: pointer;
-                }
-
-                &:hover &-text,
-                &:hover svg {
-                    color       : $light-blue-color;
-                    border-color: $light-blue-color transparent transparent transparent;
-                }
-
-            }
-
-            &-group {
-
-                position: relative;
-
-                &-input {
-                    outline      : none;
-                    font-size    : 12px;
-                    color        : $search-color;
-                    height       : 35px;
-                    border       : 1px solid $border-color;
-                    border-left  : none;
-                    width        : calc(461px - 84px);
-                    padding-left : 15px;
-                    border-radius: 0 2px 2px 0;
-                }
-
-                svg {
-                    position: absolute;
-                    right   : 9px;
-                    top     : 12px;
-                    width   : 17px;
-                    height  : 12px;
-                    color   : $search-color;
-                }
-            }
-        }
-
-        @include mq("xlarge") {
-            display     : flex;
-            margin-left : auto;
-            margin-right: 10px;
-            height      : 35px;
-
-            &-filter {
-
-                border          : 1px solid $border-color;
-                border-radius   : 2px 0 0 2px;
-                background-color: $header-button-background-color;
-                width           : 84px;
-                height          : 35px;
-                display         : flex;
-                align-items     : center;
-                justify-content : center;
-                user-select     : none;
-
-                &-text {
-                    font-size: 16px;
-                    color    : #6D758C;
-                }
-
-                svg {
-                    color      : #6D758C;
-                    transform  : rotate(90deg);
-                    width      : 13px;
-                    height     : 13px;
-                    margin-top : 2px;
-                    margin-left: 1px;
-                }
-
-                &:hover {
-                    cursor: pointer;
-                }
-
-                &:hover &-text,
-                &:hover svg {
-                    color       : $light-blue-color;
-                    border-color: $light-blue-color transparent transparent transparent;
-                }
-
-            }
-
-            &-group {
-
-                position: relative;
-
-                &-input {
-                    outline      : none;
-                    font-size    : 12px;
-                    color        : $search-color;
-                    height       : 35px;
-                    border       : 1px solid $border-color;
-                    border-left  : none;
-                    width        : calc(461px - 84px);
-                    padding-left : 15px;
-                    border-radius: 0 2px 2px 0;
-                }
-
-                svg {
-                    position: absolute;
-                    right   : 9px;
-                    top     : 12px;
-                    width   : 17px;
-                    height  : 12px;
-                    color   : $search-color;
-                }
-            }
         }
 
     }
