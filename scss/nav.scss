@@ -1,0 +1,132 @@
+.Nav {
+    border-bottom: 1px solid $border-color;
+
+    .container {
+        display    : flex;
+        height     : 58px;
+        align-items: center;
+    }
+
+    &-category {
+        position        : relative;
+        display         : flex;
+        align-items     : center;
+        width           : 137px;
+        min-width       : 137px;
+        height          : 35px;
+        background-color: $light-blue-color;
+        border-radius   : 2px;
+        cursor          : pointer;
+        margin-right    : 22px;
+        user-select     : none;
+
+        &-text {
+            height     : 35px;
+            line-height: 33px;
+            width      : calc(137px - 35px);
+            font-size  : 14px;
+            text-align : center;
+            color      : white;
+        }
+
+        &::before {
+            content         : '';
+            position        : absolute;
+            right           : 0;
+            width           : 35px;
+            height          : 35px;
+            border-radius   : 2px;
+            background-color: $dark-blue-color;
+        }
+
+        svg {
+            transform: rotate(90deg);
+            width: 14px;
+            height: 14px;
+            position    : absolute;
+            color: white;
+            right       : 11px;
+            top         : 11px;
+        }
+
+    
+
+    }
+
+    &-menu {
+
+        &-bar {
+            display: flex;
+
+            &-item {
+                position    : relative;
+                height      : 58px;
+                line-height : 58px;
+                border-right: 1px solid $border-color;
+
+
+                a {
+                    font-size: 14px;
+                    color    : #6B6B6B;
+                    padding  : 12px 19px;
+
+                    &:hover {
+                        color: $dark-blue-color;
+                    }
+                }
+
+                .selected {
+                    color: #303030;
+                }
+
+                .selected::before {
+                    content : '';
+                    position: absolute;
+                    bottom  : -1px;
+                    width   : calc(100% - 38px);
+                    border  : 1px solid $light-blue-color;
+                }
+            }
+
+            .first-item {
+                border-left: 1px solid $border-color;
+            }
+        }
+    }
+
+    &-add {
+        width          : 550px;
+        display        : flex;
+        align-items    : center;
+        margin-left    : auto;
+        justify-content: space-between;
+        height         : 58px;
+        border-right   : 1px solid $border-color;
+
+        &-text {
+            color    : $green-color;
+            font-size: 14px;
+        }
+
+        &-shape {
+            cursor          : pointer;
+            position        : relative;
+            width           : 33px;
+            height          : 33px;
+            background-color: $green-color;
+            border-radius   : 50%;
+            margin-right    : 16px;
+            color           : white;
+
+            svg {
+                position: absolute;
+                top      : 9px;
+                left     : 10px;
+                color: white;
+                width: 14px;
+                height: 14px;
+                user-select: none;
+            }
+        }
+    }
+}
