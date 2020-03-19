@@ -1,0 +1,89 @@
+.Nav-mobil {
+
+    display: none;
+
+    &.is-show {
+        display: flex;
+    }
+
+    flex-direction  : column;
+    position        : absolute;
+    right           : 0;
+    bottom          : 0;
+    top             : 0;
+    background-color: white;
+    border-left     : 1px solid $dark-gray;
+    width           : 300px;
+    box-shadow: -1px 0 20px rgba($color: black, $alpha: .3);
+
+    &-close {
+        position        : relative;
+        margin-left     : auto;
+        right           : 20px;
+        top             : 24px;
+        cursor          : pointer;
+        width           : 37px;
+        height          : 35px;
+        background-color: $header-button-background-color;
+        border          : 1px solid $border-color;
+        outline         : none;
+        user-select     : none;
+
+        .icon-cross {
+            margin-top: 3px;
+            margin-left: 1px;
+            width: 15px;
+            color: $header-button-text-color;
+        }
+    }
+
+    &-title {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 16px;
+        border-bottom: 1px solid $border-color;
+        color: $dark-gray;
+        padding-bottom: 15px;
+    }
+
+    &-container {
+
+        display       : flex;
+        flex-direction: column;
+
+        &-item {
+            height       : 50px;
+            border-bottom: 1px solid $border-color;
+
+            a {
+                text-align  : center;
+                line-height : 50px;
+                display     : block;
+                height      : 50px;
+                margin-left : auto;
+                margin-right: auto;
+                width       : 80%;
+            }
+
+            &:hover,
+            &:hover a {
+                background-color: $light-blue-color;
+                color           : white;
+            }
+        }
+
+    }
+
+    @include mq("medium") {
+        display: none;
+    }
+
+    @include mq("large") {
+        display: none;
+    }
+
+    @include mq("xlarge") {
+        display: none;
+    }
+
+}

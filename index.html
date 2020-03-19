@@ -22,8 +22,7 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <!-- <script type="text/javascript" language="javascript" src="js/jquery-3.2.1.min.js"></script> -->
-    <!-- <script type="text/javascript" language="javascript" src="script.js"></script> -->
+
 </head>
 
 <body>
@@ -131,7 +130,6 @@
     
     <nav class="Nav">
         <div class="container">
-
             <ul class="Nav-bar">
                 <li class="Nav-bar-item"><a href="#">HTML</a></li>
                 <li class="Nav-bar-item"><a href="#">CSS</a></li>
@@ -140,10 +138,28 @@
                 <li class="Nav-bar-item"><a href="#">Son Yazılar</a></li>
                 <li class="Nav-bar-item"><a href="#">Çok Okunan Yazılar</a></li> 
             </ul>
-            
         </div>
     </nav>
 
+    <nav class="Nav-mobil">
+        <button type="button" class="Nav-mobil-close">
+            <svg class="icon icon-cross">
+                <use xlink:href="#icon-cross"></use>
+            </svg>
+        </button>
+        <div class="Nav-mobil-title">Menü</div>
+        <ul class="Nav-mobil-container">
+            <li class="Nav-mobil-container-item"><a href="">HTML</a></li>
+            <li class="Nav-mobil-container-item"><a href="">CSS</a></li>
+            <li class="Nav-mobil-container-item"><a href="">JS</a></li>
+            <li class="Nav-mobil-container-item"><a href="">PHP</a></li>
+            <li class="Nav-mobil-container-item"><a href="">Son Yazılar</a></li>
+            <li class="Nav-mobil-container-item"><a href="">Çok Okunan Yazılar</a></li>
+        </ul>
+    </nav>
+
+    <script type="text/javascript" language="javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" language="javascript" src="js/main.js"></script>
 </body>
 
 </html>
