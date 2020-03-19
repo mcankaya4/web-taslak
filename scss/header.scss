@@ -13,32 +13,6 @@
         user-select: none;
     }
 
-    &-search-s {
-        margin-left     : auto;
-        margin-right    : 10px;
-        outline         : none;
-        cursor          : pointer;
-        width           : 37px;
-        height          : 35px;
-        background-color: $header-button-background-color;
-        border          : 1px solid $border-color;
-
-        .icon-search {
-            width : 20px;
-            height: 13px;
-            color : $header-button-text-color;
-        }
-
-        @include mq("large") {
-            display: none;
-        }
-
-        @include mq("xlarge") {
-            display: none;
-        }
-    }
-
-
     &-search {
 
         display     : flex;
@@ -59,7 +33,7 @@
             user-select     : none;
 
             &-text {
-                font-size: 16px;
+                font-size: 14px;
                 color    : $header-button-text-color;
             }
 
@@ -122,6 +96,30 @@
             display: none;
         }
 
+    }
+
+    &-switch {
+
+        margin-left: auto;
+        cursor: pointer;
+        width: 37px;
+        height: 35px;
+        background-color: $header-button-background-color;
+        border          : 1px solid $border-color;
+        outline: none;
+        user-select: none;
+
+        .icon-menu {
+            color: $header-button-text-color;
+        }
+
+        @include mq("large") {
+            display: none;
+        }
+
+        @include mq("xlarge") {
+            display: none;
+        }
     }
 
 }

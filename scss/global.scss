@@ -5,14 +5,15 @@
     padding-left : $container-padding;
     padding-right: $container-padding;
 
-    border: 1px solid red;
 }
 
 body {
     font-family: $font-family;
     background-color: #f2f2f2;
+    font-size: 14px;
 }
 
+a,
 a:visited,
 a:active {
     color: $dark-gray;
