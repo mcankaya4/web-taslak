@@ -93,7 +93,11 @@
         }
 
         @include mq("medium") {
-            display: none;
+            &-group {
+                &-input {
+                    width        : calc(400px - 84px);
+                }
+            }
         }
 
     }
@@ -111,6 +115,10 @@
 
         .icon-menu {
             color: $header-button-text-color;
+        }
+
+        @include mq("medium") {
+            display: none;
         }
 
         @include mq("large") {

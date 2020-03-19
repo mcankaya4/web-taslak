@@ -462,8 +462,8 @@ a:active {
       .Header-search {
         display: none; } }
     @media (min-width: 768px) and (max-width: 991px) {
-      .Header-search {
-        display: none; } }
+      .Header-search-group-input {
+        width: calc(400px - 84px); } }
   .Header-switch {
     margin-left: auto;
     cursor: pointer;
@@ -478,6 +478,9 @@ a:active {
             user-select: none; }
     .Header-switch .icon-menu {
       color: #6D758C; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .Header-switch {
+        display: none; } }
     @media (min-width: 992px) and (max-width: 1199px) {
       .Header-switch {
         display: none; } }
@@ -524,5 +527,8 @@ a:active {
     .Nav {
       display: none; } }
   @media (min-width: 768px) and (max-width: 991px) {
-    .Nav {
-      display: none; } }
+    .Nav-bar {
+      width: 100%;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
