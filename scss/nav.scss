@@ -1,5 +1,5 @@
 .Nav {
-    border-bottom: 1px solid $border-color;
+    border-bottom   : 1px solid $border-color;
     background-color: white;
 
     .container {
@@ -42,20 +42,47 @@
 
         svg {
             transform: rotate(90deg);
-            width: 14px;
-            height: 14px;
-            position    : absolute;
-            color: white;
-            right       : 11px;
-            top         : 11px;
+            width    : 14px;
+            height   : 14px;
+            position : absolute;
+            color    : white;
+            right    : 11px;
+            top      : 11px;
         }
 
-    
+
 
     }
 
-    &-menu {
+    &-switch {
 
+        margin-left: auto;
+        cursor: pointer;
+        width: 37px;
+        height: 35px;
+        background-color: $header-button-background-color;
+        border          : 1px solid $border-color;
+        outline: none;
+        user-select: none;
+
+        .icon-menu {
+            color: $header-button-text-color;
+        }
+
+        @include mq("medium") {
+            display: none;
+        }
+
+        @include mq("large") {
+            display: none;
+        }
+
+        @include mq("xlarge") {
+            display: none;
+        }
+    }
+
+    &-menu {
         &-bar {
             display: flex;
 
@@ -64,7 +91,7 @@
                 height      : 58px;
                 line-height : 58px;
                 border-right: 1px solid $border-color;
-
+                white-space  : nowrap; 
 
                 a {
                     font-size: 14px;
@@ -93,41 +120,14 @@
                 border-left: 1px solid $border-color;
             }
         }
-    }
-
-    &-add {
-        width          : 550px;
-        display        : flex;
-        align-items    : center;
-        margin-left    : auto;
-        justify-content: space-between;
-        height         : 58px;
-        border-right   : 1px solid $border-color;
-
-        &-text {
-            color    : $green-color;
-            font-size: 14px;
+        @include mq("xsmall") {
+            display: none;
         }
-
-        &-shape {
-            cursor          : pointer;
-            position        : relative;
-            width           : 33px;
-            height          : 33px;
-            background-color: $green-color;
-            border-radius   : 50%;
-            margin-right    : 16px;
-            color           : white;
-
-            svg {
-                position: absolute;
-                top      : 9px;
-                left     : 10px;
-                color: white;
-                width: 14px;
-                height: 14px;
-                user-select: none;
-            }
+        
+        @include mq("small") {
+            display: none;
         }
     }
+
+   
 }

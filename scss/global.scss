@@ -4,6 +4,8 @@
     margin-right : auto;
     padding-left : $container-padding;
     padding-right: $container-padding;
+
+    border: 1px solid red;
 }
 
 body {
@@ -17,6 +19,8 @@ a:active {
 }
 
 .icon {
+    width: 20px;
+    height: 20px;
     display: inline-block;
     stroke-width: 0;
     stroke: currentColor;

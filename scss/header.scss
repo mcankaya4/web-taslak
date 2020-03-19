@@ -124,17 +124,4 @@
 
     }
 
-    &-profile {
-        height          : 35px;
-        background-color: $header-button-background-color;
-        border          : 1px solid $border-color;
-        border-radius   : 2px;
-        user-select     : none;
-        cursor          : pointer;
-
-        &>img {
-            width : 37px;
-            height: 35px;
-        }
-    }
 }
